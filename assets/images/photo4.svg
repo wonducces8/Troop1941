@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" rx="24" fill="#0ea5e9"/>
+  <rect x="60" y="70" width="680" height="360" rx="24" fill="#0f172a" opacity="0.75"/>
+  <path d="M160 360 280 210l110 110 90-150 140 190H160Z" fill="#38bdf8" opacity="0.6"/>
+  <text x="50%" y="50%" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="34" fill="#e2f3ff">Troop 1941 Photo Spotlight</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" rx="24" fill="url(#paint1)"/>
+  <g fill="none" stroke="#e2f3ff" stroke-width="8" opacity="0.8">
+    <path d="M120 370c60-120 130-120 190 0 72-160 158-160 230 0"/>
+    <circle cx="220" cy="210" r="55"/>
+    <circle cx="460" cy="200" r="38"/>
+    <circle cx="610" cy="240" r="46"/>
+  </g>
+  <text x="50%" y="88%" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" fill="#0b1224">Service. Leadership. Adventure.</text>
+  <defs>
+    <linearGradient id="paint1" x1="0" y1="0" x2="820" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e2f3ff"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+</svg>
