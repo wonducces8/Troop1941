@@ -1,14 +1,14 @@
 :root {
-  --bg: #0f172a;
-  --surface: #0b1224;
-  --surface-alt: #0e1529;
-  --card: #0f1c34;
-  --text: #e2f3ff;
-  --muted: #98b1c9;
-  --accent: #0ea5e9;
-  --accent-2: #38bdf8;
-  --border: #1e2a3f;
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  --bg: #0b1710;
+  --surface: #112417;
+  --surface-alt: #15311f;
+  --card: #102a1b;
+  --text: #e6f3e8;
+  --muted: #b0cdb7;
+  --accent: #3b9c4a;
+  --accent-2: #7fd194;
+  --border: #1d3224;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.32);
   --radius: 20px;
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
@@ -19,8 +19,8 @@
 
 body {
   margin: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.18), transparent 28%),
-    radial-gradient(circle at 80% 0%, rgba(14, 165, 233, 0.2), transparent 24%),
+  background: radial-gradient(circle at 18% 18%, rgba(63, 156, 80, 0.16), transparent 28%),
+    radial-gradient(circle at 80% -4%, rgba(61, 140, 84, 0.16), transparent 26%),
     var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -52,7 +52,7 @@ button:focus-visible {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(17, 36, 24, 0.82);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(12px);
 }
@@ -72,7 +72,7 @@ button:focus-visible {
 
 .logo-mark {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #0b1224;
+  color: #082011;
   font-weight: 800;
   padding: 0.45rem 0.7rem;
   border-radius: 12px;
@@ -106,13 +106,13 @@ button:focus-visible {
 
 .nav a:hover {
   color: var(--text);
-  background: rgba(56, 189, 248, 0.08);
+  background: rgba(59, 156, 74, 0.12);
 }
 
 .contact-chip {
-  background: rgba(56, 189, 248, 0.12);
+  background: rgba(59, 156, 74, 0.12);
   color: var(--text) !important;
-  border: 1px solid rgba(14, 165, 233, 0.4);
+  border: 1px solid rgba(59, 156, 74, 0.35);
 }
 
 .inline-link {
@@ -172,13 +172,13 @@ button:focus-visible {
 
 .button.primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #08111f;
+  color: #0b1a0f;
   border: none;
 }
 
 .button.ghost {
   background: transparent;
-  border: 1px solid rgba(152, 177, 201, 0.4);
+  border: 1px solid rgba(176, 205, 183, 0.45);
 }
 
 .button.block {
@@ -195,15 +195,15 @@ button:focus-visible {
   display: inline-flex;
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
-  background: rgba(56, 189, 248, 0.08);
+  background: rgba(59, 156, 74, 0.12);
   color: var(--text);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  border: 1px solid rgba(59, 156, 74, 0.32);
   font-weight: 600;
   font-size: 0.95rem;
 }
 
 .hero-card {
-  background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(11, 18, 36, 0.95));
+  background: linear-gradient(135deg, rgba(59, 156, 74, 0.14), rgba(16, 42, 27, 0.95));
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -237,7 +237,7 @@ button:focus-visible {
 }
 
 .card-list li {
-  background: rgba(15, 28, 52, 0.6);
+  background: rgba(17, 43, 28, 0.65);
   border-radius: 12px;
   padding: 0.9rem 0.95rem;
   border: 1px solid var(--border);
@@ -255,8 +255,8 @@ button:focus-visible {
 }
 
 .badge {
-  background: rgba(56, 189, 248, 0.12);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(59, 156, 74, 0.14);
+  border: 1px solid rgba(59, 156, 74, 0.34);
   color: var(--text);
   padding: 0.5rem 0.8rem;
   border-radius: 14px;
@@ -346,7 +346,7 @@ h2 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.6rem;
-  background: rgba(15, 28, 52, 0.5);
+  background: rgba(17, 43, 28, 0.6);
   border-radius: 14px;
   padding: 0.9rem 1rem;
   border: 1px solid var(--border);
@@ -357,7 +357,7 @@ h2 {
   height: 28px;
   display: grid;
   place-items: center;
-  background: rgba(56, 189, 248, 0.12);
+  background: rgba(59, 156, 74, 0.2);
   border-radius: 50%;
   color: var(--accent-2);
   font-weight: 800;
@@ -404,7 +404,7 @@ h2 {
   place-items: center;
   text-align: center;
   padding: 1.25rem;
-  background: linear-gradient(180deg, rgba(15, 28, 52, 0.88) 0%, rgba(15, 28, 52, 0.76) 100%);
+  background: linear-gradient(180deg, rgba(17, 43, 28, 0.9) 0%, rgba(17, 43, 28, 0.78) 100%);
   color: var(--muted);
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -443,7 +443,7 @@ h2 {
 }
 
 .contact-card {
-  background: rgba(15, 28, 52, 0.6);
+  background: rgba(17, 43, 28, 0.6);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.1rem 1.2rem;
@@ -480,7 +480,7 @@ h2 {
 .site-footer {
   padding: 2.5rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  background: rgba(8, 17, 31, 0.9);
+  background: rgba(11, 28, 18, 0.9);
 }
 
 .footer-grid {
