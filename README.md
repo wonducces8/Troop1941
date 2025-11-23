@@ -1,12 +1,12 @@
 # Troop 1941 Website
 
-A lightweight static site for Troop 1941 (Ashburn, VA) that highlights meetings at Farmwell Station Middle School, features a photo gallery, shows an embedded calendar, and provides clear contact options.
+A lightweight static site for Troop 1941 (Ashburn, VA) that highlights meetings at Farmwell Station Middle School, supports a Google Slides embed, shows the live troop calendar, and provides clear contact options.
 
 ## Quick start
 1. Open `index.html` in your browser to preview locally.
-2. Replace the placeholder images in `assets/images` with real troop photos (use the same filenames or update the `src` values in the gallery buttons).
-3. Swap the calendar embed URL in the `iframe` under the **Troop calendar** section with your Google Calendar public embed link.
-4. The contact buttons email Troop 1941 at `grinnell99@hotmail.com` by default; update the `mailto:` addresses if you prefer a different inbox.
+2. Add your Google Slides embed URL to the `iframe` in the **Slides & highlights** section to publish meeting decks or photo recaps.
+3. The Troop 1941 Google Calendar is already embedded under **Troop calendar**; update the `src` only if the calendar link changes.
+4. The contact buttons email Scoutmaster Matthew Grinnell at `grinnell99@hotmail.com` by default; update the `mailto:` addresses if you prefer a different inbox.
 
 ## Easy hosting
 Because this is a static site, you can host it anywhere that serves HTML files:
@@ -17,5 +17,4 @@ Because this is a static site, you can host it anywhere that serves HTML files:
 ## File structure
 - `index.html` – page structure and content
 - `styles.css` – theming and layout
-- `script.js` – lightbox for the photo gallery
-- `assets/images/` – placeholder images to replace with troop photos
+- `assets/images/` – placeholder images you can swap into the slides deck if needed
