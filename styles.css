@@ -131,7 +131,7 @@ button:focus-visible {
   margin-left: 1rem;
   padding: 0.5rem 0.9rem;
   border-radius: 12px;
-  background: linear-gradient(135deg, rgba(166, 108, 63, 0.42), rgba(90, 139, 99, 0.34));
+  background: var(--accent);
   color: #fff6e8;
   font-weight: 700;
   border: 1px solid rgba(166, 108, 63, 0.5);
@@ -139,7 +139,7 @@ button:focus-visible {
 }
 
 .go-top:hover {
-  background: linear-gradient(135deg, rgba(166, 108, 63, 0.55), rgba(90, 139, 99, 0.46));
+  background: #8c5a34;
   color: #fffdf5;
 }
 
