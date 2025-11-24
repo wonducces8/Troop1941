@@ -333,7 +333,7 @@ section > * {
   border-radius: 14px;
   border: 1px solid var(--border);
   color: #fdf6eb;
-  background: linear-gradient(135deg, rgba(46, 34, 25, 0.9), rgba(29, 42, 31, 0.86));
+  background-color: #2f2219;
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.1s ease, box-shadow 0.2s ease;
@@ -341,7 +341,7 @@ section > * {
 }
 
 .button.primary {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background-color: var(--accent);
   color: #0d0805;
   border: none;
 }
