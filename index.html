@@ -441,9 +441,13 @@
     <script>
       const sections = document.querySelectorAll('section');
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const compactLayout = window.matchMedia('(max-width: 960px)');
 
       if (!prefersReducedMotion) {
-        sections.forEach((section) => section.classList.add('reveal'));
+        sections.forEach((section) => {
+          section.classList.add('reveal');
+          section.style.setProperty('--visible', 0);
+        });
 
         const revealObserver = new IntersectionObserver(
           (entries, obs) => {
@@ -454,52 +458,60 @@
               }
             });
           },
-          { threshold: 0.2, rootMargin: '0px 0px -40px 0px' }
+          { threshold: 0.1, rootMargin: '0px 0px -20px 0px' }
         );
 
         sections.forEach((section) => revealObserver.observe(section));
 
-        let activeSection = null;
         const visibility = new Map();
+        sections.forEach((section) => visibility.set(section, 0));
 
         const fadeObserver = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              visibility.set(entry.target, entry.isIntersecting ? entry.intersectionRatio : 0);
+              const ratio = entry.isIntersecting ? entry.intersectionRatio : 0;
+              visibility.set(entry.target, ratio);
+              entry.target.style.setProperty('--visible', ratio.toFixed(3));
+              if (ratio > 0.08) {
+                entry.target.classList.add('is-visible');
+              }
             });
 
-            const visible = [...visibility.entries()].filter(([, ratio]) => ratio > 0);
-            if (!visible.length) return;
+            let active = sections[0];
+            let bestRatio = visibility.get(active) || 0;
 
-            const nextActive = visible.reduce((best, current) =>
-              current[1] > best[1] ? current : best
-            )[0];
-
-            if (nextActive !== activeSection) {
-              if (activeSection) {
-                activeSection.classList.remove('section-active');
-                activeSection.classList.add('section-fading');
+            visibility.forEach((ratio, section) => {
+              if (ratio > bestRatio) {
+                bestRatio = ratio;
+                active = section;
               }
+            });
 
-              sections.forEach((section) => {
-                if (section !== nextActive && section !== activeSection) {
-                  section.classList.remove('section-fading');
-                }
-              });
-
-              nextActive.classList.add('section-active');
-              nextActive.classList.remove('section-fading');
-              activeSection = nextActive;
-            }
+            sections.forEach((section) => {
+              const isActive = section === active;
+              section.classList.toggle('section-active', isActive);
+              section.classList.toggle('section-dim', !compactLayout.matches && !isActive);
+            });
           },
-          { threshold: [0, 0.25, 0.5, 0.75, 1] }
+          {
+            threshold: [0, 0.1, 0.2, 0.35, 0.5, 0.65, 0.8, 1],
+            rootMargin: compactLayout.matches ? '-10% 0px -5% 0px' : '-15% 0px -15% 0px',
+          }
         );
 
         sections.forEach((section, index) => {
-          if (index === 0) {
-            section.classList.add('section-active');
-          }
           fadeObserver.observe(section);
+          if (index === 0) {
+            section.classList.add('is-visible', 'section-active');
+            section.style.setProperty('--visible', 1);
+          }
+        });
+
+        compactLayout.addEventListener('change', () => {
+          sections.forEach((section) => {
+            const isActive = section.classList.contains('section-active');
+            section.classList.toggle('section-dim', !compactLayout.matches && !isActive);
+          });
         });
       } else {
         sections.forEach((section) => section.classList.add('reveal', 'is-visible'));
