@@ -1,6 +1,6 @@
 # Troop 1941 Website
 
-A lightweight static site for Troop 1941 (Ashburn, VA) that highlights meetings at Farmwell Station Middle School, supports a Google Slides embed, shows the live troop calendar, and provides clear contact options.
+A lightweight static site for Troop 1941 (Leesburg, VA) that highlights meetings at Farmwell Station Middle School, supports a Google Slides embed, shows the live troop calendar, and provides clear contact options.
 
 ## Quick start
 1. To preview with a local server, run `npm start` (uses `http-server` via `npx`); or simply open `index.html` in your browser.
