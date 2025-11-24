@@ -205,6 +205,38 @@ button:focus-visible {
   font-size: 0.95rem;
 }
 
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, rgba(222, 210, 190, 0.94), rgba(177, 199, 184, 0.9));
+  border: 1px solid rgba(143, 90, 45, 0.26);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2d1a0f;
+  letter-spacing: -0.01em;
+}
+
+.stat-label {
+  font-weight: 700;
+  margin-top: 0.1rem;
+}
+
+.stat-detail {
+  color: var(--muted);
+  margin: 0.35rem 0 0;
+}
+
 .role-section {
   margin-top: 1.75rem;
 }
@@ -413,6 +445,24 @@ h2 {
   font-weight: 800;
 }
 
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.resource-card {
+  background: linear-gradient(135deg, rgba(222, 210, 190, 0.94), rgba(188, 207, 191, 0.9));
+  border: 1px solid rgba(143, 90, 45, 0.24);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.resource-card h3 {
+  margin-top: 0;
+}
+
 .cta-card .microcopy {
   color: var(--muted);
   margin-top: 0.6rem;
@@ -483,6 +533,32 @@ h2 {
 .calendar-list {
   color: var(--muted);
   padding-left: 1.1rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.faq-item {
+  background: linear-gradient(135deg, rgba(222, 210, 190, 0.94), rgba(188, 207, 191, 0.9));
+  border: 1px solid rgba(143, 90, 45, 0.24);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  box-shadow: var(--shadow);
+}
+
+.faq-item summary {
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.faq-item p {
+  color: var(--muted);
+  margin: 0.6rem 0 0.2rem;
 }
 
 .contact-grid {
