@@ -73,16 +73,6 @@ button:focus-visible {
   gap: 0.75rem;
 }
 
-.branding-logo {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(143, 90, 45, 0.32);
-  background: #fffdf8;
-}
-
 .logo-mark {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: #2d1a0f;
@@ -328,35 +318,6 @@ button:focus-visible {
   border-top: 1px solid rgba(143, 90, 45, 0.18);
 }
 
-.brand-banner,
-.brand-crest {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.75rem;
-  align-items: center;
-  margin: 1rem 0;
-  padding: 0.75rem 0.85rem;
-  background: linear-gradient(135deg, rgba(222, 210, 190, 0.94), rgba(188, 207, 191, 0.9));
-  border: 1px solid rgba(143, 90, 45, 0.26);
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-}
-
-.brand-banner img,
-.brand-crest img {
-  width: 58px;
-  height: 58px;
-  border-radius: 14px;
-  object-fit: cover;
-  border: 1px solid rgba(143, 90, 45, 0.32);
-  background: #fffdf8;
-}
-
-.brand-text {
-  margin: 0;
-  color: var(--text);
-}
-
 .two-col {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -541,22 +502,6 @@ h2 {
 
 .contact-card h3 {
   margin-top: 0;
-}
-
-.crest-card {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.8rem;
-  align-items: center;
-}
-
-.crest-card img {
-  width: 62px;
-  height: 62px;
-  border-radius: 14px;
-  border: 1px solid rgba(143, 90, 45, 0.32);
-  background: #fffdf8;
-  object-fit: cover;
 }
 
 .contact-info {
