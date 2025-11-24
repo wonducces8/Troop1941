@@ -18,6 +18,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: radial-gradient(circle at 16% 18%, rgba(139, 95, 55, 0.22), transparent 28%),
@@ -130,6 +134,33 @@ button:focus-visible {
 
 .hero {
   padding: 4rem 0 3rem;
+}
+
+.hero,
+.panel {
+  scroll-margin-top: 110px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .hero-grid {
