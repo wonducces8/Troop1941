@@ -474,13 +474,14 @@
         const thresholds = Array.from({ length: 21 }, (_, i) => i / 20);
         let activeSection = sections[0];
         let rafId = null;
+        let smoothing = compactLayout.matches ? 0.1 : 0.18;
 
         const smoothUpdate = () => {
           let needsMoreFrames = false;
 
           currentVisibility.forEach((current, section) => {
             const target = targetVisibility.get(section) ?? 0;
-            const next = current + (target - current) * 0.18;
+            const next = current + (target - current) * smoothing;
             currentVisibility.set(section, next);
             section.style.setProperty('--visible', next.toFixed(3));
             if (Math.abs(next - target) > 0.002) {
@@ -530,7 +531,7 @@
           },
           {
             threshold: thresholds,
-            rootMargin: compactLayout.matches ? '-10% 0px -5% 0px' : '-15% 0px -15% 0px',
+            rootMargin: compactLayout.matches ? '-6% 0px -6% 0px' : '-18% 0px -18% 0px',
           }
         );
 
@@ -545,6 +546,7 @@
         });
 
         compactLayout.addEventListener('change', () => {
+          smoothing = compactLayout.matches ? 0.1 : 0.18;
           sections.forEach((section) => {
             const isActive = section.classList.contains('section-active');
             section.classList.toggle('section-dim', !compactLayout.matches && !isActive);
