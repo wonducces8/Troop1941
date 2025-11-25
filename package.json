@@ -1,0 +1,11 @@
+{
+  "name": "troop-1941-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site for Boy Scouts of America Troop 1941 in Leesburg, VA.",
+  "scripts": {
+    "start": "npx http-server -p 4173 -c-1 .",
+    "serve": "npx http-server -p 4173 -c-1 .",
+    "lint": "echo \"No linting configured for this static site\""
+  }
+}
